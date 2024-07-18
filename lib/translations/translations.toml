@@ -1,0 +1,33 @@
+[conf]
+default-lang = "de"
+
+[lang.en]
+dipl-thesis = "Diploma thesis"
+in-study = "in"
+submitted-to = "submitted in partial fulfillment of the requirements for the degree of"
+submitted-by = "by"
+student-number = "Registration Number"
+at-faculty = "to the Faculty of Informatics"
+at-TU = "at the TU Wien"
+advisor = "Advisor"
+assistance = "Assistance"
+vienna = "Vienna"
+
+[lang.de]
+dipl-thesis = "Diplomarbeit"
+in-study = "im Rahmen des Studiums"
+submitted-to = "zur Erlangung des akademischen Grades"
+submitted-by = "eingereicht von"
+student-number = "Matrikelnummer"
+at-faculty = "an der Fakultät für Informatik"
+at-TU = "der Technischen Universität Wien"
+advisor = "Betreuung"
+assistance = "Mitwirkung"
+vienna = "Wien"
+
+dipl = "Diplom-Ingenieur"
+TU = "Technische Universität Wien"
+TU-postal = "A-1040 Wien"
+TU-address = "Karlsplatz 13"
+TU-tel = "Tel. +43-1-58801-0"
+TU-web = "www.tuwien.at"
