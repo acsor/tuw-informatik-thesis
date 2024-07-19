@@ -1,0 +1,12 @@
+[package]
+name = "unofficial-tu-wien-thesis"
+version = "0.0.1"
+entrypoint = "lib/template.typ"
+authors = ["Othmar Lechner @Otto-AA"]
+license = "MIT-0"
+description = "An inoffical template for a thesis at the TU Wien informatics institute."
+
+[template]
+path = "template"
+entrypoint = "thesis.typ"
+thumbnail = "frontpage.jpg"
