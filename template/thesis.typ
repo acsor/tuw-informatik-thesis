@@ -1,5 +1,7 @@
 #import "@local/unofficial-tu-wien-thesis:0.0.1": thesis, front-matter-styles, main-matter-styles, back-matter-styles, appendix-styles, flex-caption-styles, toc-styles, general-styles, page-header-styles
 
+#show: general-styles
+
 #show: thesis.with(
   lang: "en",
   title: (
@@ -19,7 +21,6 @@
 
 #show: flex-caption-styles
 #show: toc-styles
-#show: general-styles
 #show: front-matter-styles
 
 // set the default "supplement" for all "algorithm" figures. The supplement is shown when referencing it (e.g. @my-alg)

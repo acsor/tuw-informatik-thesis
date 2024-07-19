@@ -7,7 +7,7 @@
 
   show link: underline
   show heading.where(level: 1): it => {
-    pagebreak(weak: true)
+    pagebreak()
     text(it, size: 1.6em)
     v(14pt)
   }

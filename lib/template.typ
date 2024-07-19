@@ -2,15 +2,6 @@
 #import "frontpage.typ": frontpage
 #import "erklaerung.typ": erklaerung
 
-#let global-styles = body => {
-  show heading.where(level: 1): it => {
-    pagebreak()
-    it
-  }
-  body
-}
-
-
 #let thesis(
   lang: "en",
   title: (:),
@@ -26,14 +17,7 @@
   doc,
 ) = {
   assert(lang in ("en", "de"))
-
-  let additional-translations = (
-    title: title,
-    subtitle: subtitle,
-    academic-title: academic-title,
-    thesis-type: thesis-type,
-    curriculum: curriculum,
-  )
+  set text(lang: lang)
 
   let main-language-title = title.at("de", default: "")
   if lang == "en" {
@@ -46,6 +30,13 @@
     date: date,
   )
 
+  let additional-translations = (
+    title: title,
+    subtitle: subtitle,
+    academic-title: academic-title,
+    thesis-type: thesis-type,
+    curriculum: curriculum,
+  )
   init_translations(additional-translations)
 
 
@@ -59,12 +50,10 @@
     #pagebreak()
   ]
 
-  // TODO: styling of this section
-  show: global-styles
   erklaerung(author, date)
-
 
   doc
 }
 
+// export styles
 #import "styles/all.typ": *
