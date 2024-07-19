@@ -14,7 +14,6 @@
   author: (:),
   advisor: (:),
   assitants: (),
-  curriculum: none,
   date: datetime.today(),
 ) = {
   text(font: "FreeSans")[
@@ -42,15 +41,15 @@
 
       #v(2em)
 
-      #upper(text(translate("dipl-thesis"), size: 1.4em))
+      #upper(text(translate("thesis-type"), size: 1.4em))
 
       #translate("submitted-to")
 
-      #text(translate("dipl"), size: 1.4em, weight: "bold")
+      #text(translate("academic-title"), size: 1.4em, weight: "bold")
 
       #translate("in-study")
 
-      #text(curriculum, size: 1.2em, weight: "bold")
+      #text(translate("curriculum"), size: 1.2em, weight: "bold")
 
       #translate("submitted-by")
 

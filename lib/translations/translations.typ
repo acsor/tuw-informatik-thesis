@@ -1,13 +1,21 @@
 #import "@preview/linguify:0.4.1": linguify, set-database
 
-#set text(lang: "en")
+#let set-defaults = (obj, keys, default) => {
+  // for each key, sets default value if key does not exist
+  for key in keys {
+    obj.insert(key, obj.at(key, default: default))
+  }
+  return obj
+}
 
-#let init_database = (title, subtitle) => {
+#let init_translations = (additional-translations) => {
   let lang_data = toml("translations.toml")
-  lang_data.lang.en.insert("title", title.en)
-  lang_data.lang.de.insert("title", title.de)
-  lang_data.lang.en.insert("subtitle", subtitle.en)
-  lang_data.lang.de.insert("subtitle", subtitle.de)
+
+  for (key, value) in additional-translations {
+    value = set-defaults(value, ("en", "de"), "")
+    lang_data.lang.en.insert(key, value.en)
+    lang_data.lang.de.insert(key, value.de)
+  }
   set-database(lang_data);
 }
 

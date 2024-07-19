@@ -1,21 +1,19 @@
 #import "@local/unofficial-tu-wien-thesis:0.0.1": thesis, front-matter-styles, main-matter-styles, back-matter-styles, appendix-styles, flex-caption-styles, toc-styles, general-styles, page-header-styles
 
 #show: thesis.with(
+  lang: "en",
   title: (
     en: "An ode for Lord Ipsum",
     de: "Eine Ode an Lord Ipsum",
   ),
   subtitle: (:),
-  lang: "en",
+  thesis-type: (en: "Diploma Thesis", de: "Diplomarbeit"),
+  academic-title: (de: "Diplom-Ingenieur", en: "Diplom-Ingenieur"),
+  curriculum: (en: "Software Engineering & Internet Computing", de: "Software Engineering & Internet Computing "),
   author: (name: "Lord Ipsus", student-number: 11223344),
-  advisor: (
-    name: "Darth Ipsus",
-    pre-title: "Univ.Prof.Dr.",
-    post-title: none,
-  ),
+  advisor: (name: "Darth Ipsus", pre-title: "Univ.Prof.Dr."),
   assitants: ((name: "Ipsinator", pre-title: "Sir"),),
-  curriculum: "Software Engineering & Internet Computing",
-  keywords: ("Pizza"),
+  keywords: ("Lorem Ipsum"),
   date: datetime.today(),
 )
 

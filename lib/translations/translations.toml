@@ -2,7 +2,6 @@
 default-lang = "de"
 
 [lang.en]
-dipl-thesis = "Diploma thesis"
 in-study = "in"
 submitted-to = "submitted in partial fulfillment of the requirements for the degree of"
 submitted-by = "by"
@@ -14,7 +13,6 @@ assistance = "Assistance"
 vienna = "Vienna"
 
 [lang.de]
-dipl-thesis = "Diplomarbeit"
 in-study = "im Rahmen des Studiums"
 submitted-to = "zur Erlangung des akademischen Grades"
 submitted-by = "eingereicht von"
@@ -25,7 +23,6 @@ advisor = "Betreuung"
 assistance = "Mitwirkung"
 vienna = "Wien"
 
-dipl = "Diplom-Ingenieur"
 TU = "Technische Universität Wien"
 TU-postal = "A-1040 Wien"
 TU-address = "Karlsplatz 13"

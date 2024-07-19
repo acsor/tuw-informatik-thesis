@@ -1,4 +1,4 @@
-#import "translations/translations.typ": init_database
+#import "translations/translations.typ": init_translations
 #import "frontpage.typ": frontpage
 #import "erklaerung.typ": erklaerung
 
@@ -12,50 +12,55 @@
 
 
 #let thesis(
+  lang: "en",
   title: (:),
   subtitle: (:),
-  lang: "en",
+  thesis-type: (en: "Diploma Thesis", de: "Diplomarbeit"),
+  academic-title: (en: "Diplom-Ingenieur", de: "Diplom-Ingenieur"),
+  curriculum: (en: "Software Engineering & Internet Computing", de: "Software Engineering & Internet Computing "),
   author: (:),
   advisor: (:),
   assitants: (),
-  curriculum: none,
   keywords: (),
   date: datetime.today(),
-  // TODO: check how the Latex template uses these fields
-  // thesis-type: "master",
-  // academic-title: "dipl",
   doc,
 ) = {
-  title.insert("de", title.at("de", default: ""))
-  title.insert("en", title.at("en", default: ""))
-  subtitle.insert("de", subtitle.at("de", default: ""))
-  subtitle.insert("en", subtitle.at("en", default: ""))
-  let main-title = title.de
+  assert(lang in ("en", "de"))
+
+  let additional-translations = (
+    title: title,
+    subtitle: subtitle,
+    academic-title: academic-title,
+    thesis-type: thesis-type,
+    curriculum: curriculum,
+  )
+
+  let main-language-title = title.at("de", default: "")
   if lang == "en" {
-    main-title = title.en
+    main-language-title = title.at("en", default: "")
   }
   set document(
-    title: main-title,
+    title: main-language-title,
     author: author.at("name", default: none),
     keywords: keywords,
     date: date,
   )
 
-  init_database(title, subtitle)
+  init_translations(additional-translations)
 
 
   text(lang: "de")[
-    #frontpage(author: author, advisor: advisor, assitants: assitants, curriculum: curriculum, date: date)
+    #frontpage(author: author, advisor: advisor, assitants: assitants, date: date)
     #pagebreak()
     #pagebreak()
   ]
   text(lang: "en")[
-    #frontpage(author: author, advisor: advisor, assitants: assitants, curriculum: curriculum, date: date)
+    #frontpage(author: author, advisor: advisor, assitants: assitants, date: date)
     #pagebreak()
   ]
 
+  // TODO: styling of this section
   show: global-styles
-
   erklaerung(author, date)
 
 
