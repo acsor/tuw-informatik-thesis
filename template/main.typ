@@ -59,7 +59,9 @@ In @tuwi-logo, we can see the TUWI Logo, followed by @some-table and @lorem-ipsu
 
 == With sub ipsums
 
-#lorem(100)
+#lorem(30)
+
+#lorem(30)
 
 == Many sub ipsums
 
