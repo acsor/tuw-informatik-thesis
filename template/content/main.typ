@@ -9,7 +9,7 @@
 In @tuwi-logo, we can see the TUWI Logo, followed by @some-table and @lorem-ipsum-alg. The algorithm was discussed here: @team2019people.
 
 #figure(
-  image("./graphics/TUWI-Logo-Code.png", width: 60%),
+  image("../graphics/TUWI-Logo-Code.png", width: 60%),
   caption: flex-caption(
     [The TUWI Logo, monochrome and colorized.],
     [TUWI logo (short description for list of figures)],

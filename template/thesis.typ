@@ -1,4 +1,4 @@
-#import "@local/unofficial-tu-wien-thesis:0.0.1": thesis, front-matter-styles, main-matter-styles, back-matter-styles, appendix-styles, flex-caption-styles, toc-styles, general-styles, page-header-styles
+#import "@local/unofficial-tu-wien-thesis:0.0.1": *
 
 #show: general-styles
 
@@ -26,13 +26,13 @@
 // set the default "supplement" for all "algorithm" figures. The supplement is shown when referencing it (e.g. @my-alg)
 #show figure.where(kind: "algorithm"): set figure(supplement: "Algorithm")
 
-#include "front-matter.typ"
+#include "content/front-matter.typ"
 #outline()
 
 #show: main-matter-styles
 #show: page-header-styles
 
-#include "main.typ"
+#include "content/main.typ"
 
 #show: back-matter-styles
 #set page(header: none)
@@ -45,4 +45,4 @@
 
 #show: appendix-styles
 
-#include "appendix.typ"
+#include "content/appendix.typ"
