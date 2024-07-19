@@ -1,0 +1,39 @@
+name: Compile template PDF
+
+on: push
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v4
+
+      - name: Install Typst
+        run: sudo snap install typst
+
+      - name: Compile PDF
+        run: |
+          sed -i 's/\@local\/unofficial-tu-wien-thesis:0.0.1/..\/lib\/template.typ/' template/thesis.typ
+          sed -i 's/\@local\/unofficial-tu-wien-thesis:0.0.1/..\/..\/lib\/template.typ/' template/content/main.typ
+          typst compile template/thesis.typ --root .
+
+      - name: Copy File
+        run: |
+          mkdir out
+          cp ./template/thesis.pdf ./out/thesis.pdf
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'out'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,5 +1,7 @@
 # Unofficial thesis template for informatics at TU Wien
 
+The current rendered template PDF can be found here: https://otto-aa.github.io/unofficial-tu-wien-thesis-template/thesis.pdf
+
 ## Goals
 
 This template has the following goals:
