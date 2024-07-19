@@ -1,4 +1,4 @@
-#import "@local/unofficial-tu-wien-thesis:0.0.1": thesis, front-matter, main-matter, back-matter, use-flex-caption
+#import "@local/unofficial-tu-wien-thesis:0.0.1": thesis, front-matter, main-matter, back-matter, appendix, use-flex-caption
 
 #show: thesis.with(
   title: (
@@ -39,5 +39,7 @@
 #outline(title: "List of Algorithms", target: figure.where(kind: "algorithm"))
 
 #bibliography("refs.bib")
+
+#show: appendix
 
 #include "appendix.typ"

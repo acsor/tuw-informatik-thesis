@@ -62,35 +62,4 @@
   doc
 }
 
-
-#let front-matter = it => {
-  it
-}
-
-#let main-matter = it => {
-  it
-}
-
-#let back-matter = it => {
-  it
-}
-
-#let in-outline = state("in-outline", false)
-#let use-flex-caption = rest => {
-  show outline: it => {
-    in-outline.update(true)
-    it
-    in-outline.update(false)
-  }
-  rest
-}
-
-#let flex-caption(long, short) = (
-  context (
-    if in-outline.get() {
-      short
-    } else {
-      long
-    }
-  )
-)
+#import "styles/all.typ": *
