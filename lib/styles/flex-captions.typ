@@ -1,5 +1,5 @@
 #let in-outline = state("in-outline", false)
-#let use-flex-caption = rest => {
+#let flex-caption-styles = rest => {
   show outline: it => {
     in-outline.update(true)
     it

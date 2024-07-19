@@ -1,8 +1,8 @@
-= Danksagung
+#heading(outlined: false)[Danksagung]
 
 #lorem(100)
 
-= Acknowledgements
+#heading(outlined: false)[Acknowledgements]
 
 #lorem(100)
 

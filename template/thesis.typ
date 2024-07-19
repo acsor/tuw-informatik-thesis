@@ -1,4 +1,4 @@
-#import "@local/unofficial-tu-wien-thesis:0.0.1": thesis, front-matter, main-matter, back-matter, appendix, use-flex-caption
+#import "@local/unofficial-tu-wien-thesis:0.0.1": thesis, front-matter-styles, main-matter-styles, back-matter-styles, appendix-styles, flex-caption-styles, toc-styles
 
 #show: thesis.with(
   title: (
@@ -19,8 +19,9 @@
   date: datetime.today(),
 )
 
-#show: use-flex-caption
-#show: front-matter
+#show: flex-caption-styles
+#show: toc-styles
+#show: front-matter-styles
 
 // set the default "supplement" for all "algorithm" figures. The supplement is shown when referencing it (e.g. @my-alg)
 #show figure.where(kind: "algorithm"): set figure(supplement: "Algorithm")
@@ -28,11 +29,11 @@
 #include "front-matter.typ"
 #outline()
 
-#show: main-matter
+#show: main-matter-styles
 
 #include "main.typ"
 
-#show: back-matter
+#show: back-matter-styles
 
 #outline(title: "List of Figures", target: figure.where(kind: image))
 #outline(title: "List of Tables", target: figure.where(kind: table))
@@ -40,6 +41,6 @@
 
 #bibliography("refs.bib")
 
-#show: appendix
+#show: appendix-styles
 
 #include "appendix.typ"
