@@ -1,6 +1,6 @@
 #import "translations/translations.typ": init_translations
 #import "frontpage.typ": frontpage
-#import "erklaerung.typ": erklaerung
+#import "statement.typ": statement
 
 #let thesis(
   lang: "en",
@@ -50,7 +50,7 @@
     #pagebreak()
   ]
 
-  erklaerung(author, date)
+  statement(author, date)
 
   doc
 }
