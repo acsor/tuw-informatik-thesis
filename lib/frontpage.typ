@@ -15,6 +15,7 @@
   advisor: (:),
   assitants: (),
   curriculum: none,
+  date: datetime.today(),
 ) = {
   text(font: "FreeSans")[
     #place(dx: -40pt, dy: -20pt)[
@@ -23,30 +24,40 @@
       ]
     ]
 
-    #v(8em)
+    #v(6em)
 
     #align(center)[
       #show par: set block(spacing: 1.5em)
-      #text()[
-        #text(translate("title"), size: 2.5em, weight: "bold")
 
-        #upper(text(translate("dipl-thesis"), size: 1.4em))
+      #box(width: 100%, height: 7.5em)[
+        #place(bottom)[
+          #box(width: 100%, height: 100%)[
+            // TODO: spacing between title and subtitle is not good
+            #text(translate("title"), size: 2.5em, weight: "bold")
 
-        #translate("submitted-to")
-
-        #text(translate("dipl"), size: 1.4em, weight: "bold")
-
-        #translate("in-study")
-
-        #text(curriculum, size: 1.2em, weight: "bold")
-
-        #translate("submitted-by")
-
-        #show par: set block(spacing: 0.6em)
-        #text(author.at("name", default: ""), size: 1.2em, weight: "bold")
-
-        #translate("student-number") #author.at("student-number", default: "")
+            #text(translate("subtitle"), size: 1.5em, weight: "bold")
+          ]
+        ]
       ]
+
+      #v(2em)
+
+      #upper(text(translate("dipl-thesis"), size: 1.4em))
+
+      #translate("submitted-to")
+
+      #text(translate("dipl"), size: 1.4em, weight: "bold")
+
+      #translate("in-study")
+
+      #text(curriculum, size: 1.2em, weight: "bold")
+
+      #translate("submitted-by")
+
+      #show par: set block(spacing: 0.6em)
+      #text(author.at("name", default: ""), size: 1.2em, weight: "bold")
+
+      #translate("student-number") #author.at("student-number", default: "")
     ]
 
     #v(3em)
@@ -78,7 +89,7 @@
         align: (left, center, center),
         row-gutter: 4em,
 
-        [#translate("vienna"), #datetime.today().display("[day].[month].[year]") #v(2em)],
+        [#translate("vienna"), #date.display("[day].[month].[year]") #v(2em)],
         [#line(length: 90%) #author.at("name", default: "")],
         [#line(length: 90%) #advisor.at("name", default: "")],
 

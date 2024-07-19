@@ -2,10 +2,12 @@
 
 #set text(lang: "en")
 
-#let init_database = (title) => {
+#let init_database = (title, subtitle) => {
   let lang_data = toml("translations.toml")
   lang_data.lang.en.insert("title", title.en)
   lang_data.lang.de.insert("title", title.de)
+  lang_data.lang.en.insert("subtitle", subtitle.en)
+  lang_data.lang.de.insert("subtitle", subtitle.de)
   set-database(lang_data);
 }
 
