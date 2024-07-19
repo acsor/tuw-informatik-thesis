@@ -1,4 +1,4 @@
-#import "@local/unofficial-tu-wien-thesis:0.0.1": thesis, front-matter-styles, main-matter-styles, back-matter-styles, appendix-styles, flex-caption-styles, toc-styles, general-styles
+#import "@local/unofficial-tu-wien-thesis:0.0.1": thesis, front-matter-styles, main-matter-styles, back-matter-styles, appendix-styles, flex-caption-styles, toc-styles, general-styles, page-header-styles
 
 #show: thesis.with(
   title: (
@@ -31,10 +31,12 @@
 #outline()
 
 #show: main-matter-styles
+#show: page-header-styles
 
 #include "main.typ"
 
 #show: back-matter-styles
+#set page(header: none)
 
 #outline(title: "List of Figures", target: figure.where(kind: image))
 #outline(title: "List of Tables", target: figure.where(kind: table))

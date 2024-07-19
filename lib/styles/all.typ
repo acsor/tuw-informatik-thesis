@@ -6,3 +6,4 @@
 #import "toc.typ": toc-styles
 #import "flex-captions.typ": flex-caption-styles, flex-caption
 #import "general.typ": general-styles
+#import "page-header.typ": page-header-styles

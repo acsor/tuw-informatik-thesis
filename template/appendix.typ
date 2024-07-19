@@ -11,3 +11,9 @@
 == 10 words lorem
 
 #lorem(10)
+
+== Long ipsum
+
+#lorem(300)
+
+#lorem(300)
