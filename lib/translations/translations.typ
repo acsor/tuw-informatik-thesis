@@ -12,9 +12,11 @@
   let lang_data = toml("translations.toml")
 
   for (key, value) in additional-translations {
-    value = set-defaults(value, ("en", "de"), "")
-    lang_data.lang.en.insert(key, value.en)
-    lang_data.lang.de.insert(key, value.de)
+    if value != none {
+      value = set-defaults(value, ("en", "de"), "")
+      lang_data.lang.en.insert(key, value.en)
+      lang_data.lang.de.insert(key, value.de)
+    }
   }
   set-database(lang_data);
 }

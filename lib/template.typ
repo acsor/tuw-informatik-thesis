@@ -12,12 +12,14 @@
   author: (:),
   advisor: (:),
   assitants: (),
+  reviewers: (),
   keywords: (),
   date: datetime.today(),
   doc,
 ) = {
   assert(lang in ("en", "de"))
   set text(lang: lang)
+  let show-curriculum = curriculum != none
 
   let main-language-title = title.at("de", default: "")
   if lang == "en" {
@@ -41,12 +43,12 @@
 
 
   text(lang: "de")[
-    #frontpage(author: author, advisor: advisor, assitants: assitants, date: date)
+    #frontpage(author, advisor, assitants, reviewers, show-curriculum, date)
     #pagebreak()
     #pagebreak()
   ]
   text(lang: "en")[
-    #frontpage(author: author, advisor: advisor, assitants: assitants, date: date)
+    #frontpage(author, advisor, assitants, reviewers, show-curriculum, date)
     #pagebreak()
   ]
 

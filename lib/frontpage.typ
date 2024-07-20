@@ -10,11 +10,19 @@
   }
 }
 
+#let signature = person => [
+  #line(length: 90%, stroke: 0.5pt)
+
+  #person.at("name", default: "")
+]
+
 #let frontpage(
-  author: (:),
-  advisor: (:),
-  assitants: (),
-  date: datetime.today(),
+  author,
+  advisor,
+  assitants,
+  reviewers,
+  show-curriculum,
+  date,
 ) = {
   text(font: "FreeSans")[
     #place(dx: -40pt, dy: -20pt)[
@@ -47,9 +55,11 @@
 
       #text(translate("academic-title"), size: 1.4em, weight: "bold")
 
-      #translate("in-study")
+      #if show-curriculum [
+        #translate("in-study")
 
-      #text(translate("curriculum"), size: 1.2em, weight: "bold")
+        #text(translate("curriculum"), size: 1.2em, weight: "bold")
+      ]
 
       #translate("submitted-by")
 
@@ -76,6 +86,18 @@
       ]
     ]
 
+    #if reviewers.len() > 0 {
+      let signatures = reviewers.map(signature)
+      while signatures.len() < 3 {
+        signatures.insert(0, [])
+      }
+
+      v(3em)
+      [#translate("dissertation-reviewed-by"):]
+      v(3em)
+      grid(columns: (1fr, 1fr, 1fr), align: center, ..signatures)
+    }
+
     #place(
       bottom + center,
       dy: 3em,
@@ -89,8 +111,8 @@
         row-gutter: 4em,
 
         [#translate("vienna"), #date.display("[day].[month].[year]") #v(2em)],
-        [#line(length: 90%) #author.at("name", default: "")],
-        [#line(length: 90%) #advisor.at("name", default: "")],
+        signature(author),
+        signature(advisor),
 
         grid.cell(colspan: 3)[
           #align(center)[
