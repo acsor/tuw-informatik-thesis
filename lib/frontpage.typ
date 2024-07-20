@@ -64,7 +64,7 @@
       #translate("submitted-by")
 
       #show par: set block(spacing: 0.6em)
-      #text(author.at("name", default: ""), size: 1.2em, weight: "bold")
+      #text(name-with-titles(author), size: 1.2em, weight: "bold")
 
       #translate("student-number") #author.at("student-number", default: "")
     ]
