@@ -1,12 +1,20 @@
 [package]
-name = "unofficial-tu-wien-thesis"
+name = "definitely-not-tuw-thesis"
 version = "0.0.1"
-entrypoint = "lib/template.typ"
+entrypoint = "src/thesis.typ"
 authors = ["Othmar Lechner @Otto-AA"]
 license = "MIT-0"
 description = "An inoffical template for a thesis at the TU Wien informatics institute."
+exclude = [
+	".github",
+	"docs",
+	"scripts",
+	"tests",
+	".typstignore",
+	"Justfile",
+]
 
 [template]
 path = "template"
 entrypoint = "thesis.typ"
-thumbnail = "frontpage.jpg"
+thumbnail = "thumbnail.jpg"

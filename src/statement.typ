@@ -3,6 +3,7 @@
 #let statement = (author, date) => {
   heading(translate("statement"), outlined: false)
 
+  // TODO: include pre- and post-title
   author.at("name", default: "")
   v(2em)
 

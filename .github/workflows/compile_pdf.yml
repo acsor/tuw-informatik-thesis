@@ -10,18 +10,26 @@ permissions:
 
 jobs:
   build:
+    strategy:
+      matrix:
+        typst-version: ["0.11"]
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v4
 
-      - name: Install Typst
-        run: sudo snap install typst
+      - name: Install FreeSans font
+        run: sudo apt-get install fonts-freefont-ttf
+
+      - name: Setup typst
+        uses: typst-community/setup-typst@v3
+        with:
+          typst-version: ${{ matrix.typst-version }}
 
       - name: Compile PDF
         run: |
-          sed -i 's/\@local\/unofficial-tu-wien-thesis:0.0.1/..\/lib\/template.typ/' template/thesis.typ
-          sed -i 's/\@local\/unofficial-tu-wien-thesis:0.0.1/..\/..\/lib\/template.typ/' template/content/main.typ
+          sed -i 's/\@preview\/definitely-not-tuw-thesis:[0-9].[0-9].[0-9]/..\/src\/thesis.typ/' template/thesis.typ
+          sed -i 's/\@preview\/definitely-not-tuw-thesis:[0-9].[0-9].[0-9]/..\/..\/src\/thesis.typ/' template/content/main.typ
           typst compile template/thesis.typ --root .
 
       - name: Copy File

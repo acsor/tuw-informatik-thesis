@@ -81,6 +81,7 @@
         #translate("advisor"): #name-with-titles(advisor)
 
         #if assitants.len() > 0 {
+          // TODO: this should not be a & join, but an aligning &. Woopsie
           [#translate("assistance"): #assitants.map(name-with-titles).join(" & ")]
         }
       ]

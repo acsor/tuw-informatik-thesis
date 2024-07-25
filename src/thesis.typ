@@ -8,10 +8,10 @@
   subtitle: (:),
   thesis-type: (en: "Diploma Thesis", de: "Diplomarbeit"),
   academic-title: (en: "Diplom-Ingenieur", de: "Diplom-Ingenieur"),
-  curriculum: (en: "Software Engineering & Internet Computing", de: "Software Engineering & Internet Computing "),
+  curriculum: none,
   author: (:),
   advisor: (:),
-  assitants: (),
+  assistants: (),
   reviewers: (),
   keywords: (),
   date: datetime.today(),
@@ -43,12 +43,12 @@
 
 
   text(lang: "de")[
-    #frontpage(author, advisor, assitants, reviewers, show-curriculum, date)
+    #frontpage(author, advisor, assistants, reviewers, show-curriculum, date)
     #pagebreak()
     #pagebreak()
   ]
   text(lang: "en")[
-    #frontpage(author, advisor, assitants, reviewers, show-curriculum, date)
+    #frontpage(author, advisor, assistants, reviewers, show-curriculum, date)
     #pagebreak()
   ]
 

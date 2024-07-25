@@ -1,4 +1,4 @@
-#import "@local/unofficial-tu-wien-thesis:0.0.1": flex-caption
+#import "@preview/definitely-not-tuw-thesis:0.0.1": flex-caption
 
 = Once upon an ipsum
 
