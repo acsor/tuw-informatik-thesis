@@ -15,5 +15,6 @@
   assistants: ((name: "Ipsinator", pre-title: "Sir"), (name: "Ipsi 2.0")),
   reviewers: ((name: "Rachel Muster", pre-title: "Dr."), (name: "Andrea Eco")),
   keywords: ("Lorem Ipsum"),
+  font: "DejaVu Sans",
   date: datetime(year: 2024, month: 12, day: 1),
 )

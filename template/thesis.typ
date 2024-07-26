@@ -14,6 +14,7 @@
   assistants: ((name: "Ipsinator", pre-title: "Sir"),),
   reviewers: (),
   keywords: ("Lorem Ipsum"),
+  font: "DejaVu Sans",
   date: datetime.today(),
 )
 

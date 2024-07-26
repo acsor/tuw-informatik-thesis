@@ -17,6 +17,7 @@
 ]
 
 #let frontpage(
+  font,
   author,
   advisor,
   assitants,
@@ -24,7 +25,7 @@
   show-curriculum,
   date,
 ) = {
-  text(font: "FreeSans")[
+  text(font: font)[
     #place(dx: -40pt, dy: -20pt)[
       #box(height: 32pt)[
         #image("graphics/Logo-schwarz.png", alt: "Logo TU Wien Informatics")
