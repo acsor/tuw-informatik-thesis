@@ -7,8 +7,6 @@ env:
   REGISTRY_REPO: Otto-AA/packages
   PATH_PREFIX: packages/preview
 
-# TODO: update github pages
-
 jobs:
   release:
     runs-on: ubuntu-latest

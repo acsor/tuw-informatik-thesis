@@ -1,14 +1,5 @@
 #import "translations/translations.typ": translate
-
-#let name-with-titles = p => {
-  if "pre-title" in p {
-    [#p.at("pre-title", default: "") ]
-  }
-  p.at("name", default: "")
-  if "post-title" in p {
-    [ #p.at("post-title", default: "")]
-  }
-}
+#import "utils.typ": name-with-titles
 
 #let signature = person => [
   #line(length: 90%, stroke: 0.5pt)

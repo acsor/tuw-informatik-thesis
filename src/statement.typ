@@ -1,10 +1,10 @@
 #import "translations/translations.typ": translate
+#import "utils.typ": name-with-titles
 
 #let statement = (author, date) => {
   heading(translate("statement"), outlined: false)
 
-  // TODO: include pre- and post-title
-  author.at("name", default: "")
+  name-with-titles(author)
   v(2em)
 
   translate("statement-own-work")
