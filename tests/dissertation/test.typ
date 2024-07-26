@@ -12,7 +12,7 @@
   author: (name: "Lord Ipsus", student-number: 11223344),
   // TODO: second advisor
   advisor: (name: "Darth Ipsus", pre-title: "Univ.Prof.Dr."),
-  assistants: ((name: "Ipsinator", pre-title: "Sir"), (name: "Ipsi 2.0")),
+  assistants: (),
   reviewers: ((name: "Rachel Muster", pre-title: "Dr."), (name: "Andrea Eco")),
   keywords: ("Lorem Ipsum"),
   font: "DejaVu Sans",

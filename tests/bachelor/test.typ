@@ -11,7 +11,7 @@
   curriculum: (en: "Media Informatics and Visual Computing", de: "Medieninformatik und Visual Computing"),
   author: (name: "Lord Ipsus", student-number: 11223344),
   advisor: (name: "Darth Ipsus", pre-title: "Univ.Prof.Dr."),
-  assistants: ((name: "Ipsinator", pre-title: "Sir"), (name: "Ipsi 2.0")),
+  assistants: ((name: "Ipsinator", pre-title: "Sir"), (name: "Ipsi 2.0"), (name: "Ipsi 3.0")),
   reviewers: (),
   keywords: ("Lorem Ipsum"),
   font: "DejaVu Sans",

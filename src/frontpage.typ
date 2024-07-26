@@ -11,7 +11,7 @@
   font,
   author,
   advisor,
-  assitants,
+  assistants,
   reviewers,
   show-curriculum,
   date,
@@ -72,10 +72,14 @@
         #show par: set block(spacing: 0.5em)
         #translate("advisor"): #name-with-titles(advisor)
 
-        #if assitants.len() > 0 {
-          // TODO: this should not be a & join, but an aligning &. Woopsie
-          [#translate("assistance"): #assitants.map(name-with-titles).join(" & ")]
-        }
+        #if assistants.len() > 0 [
+          #translate("assistance"): #name-with-titles(assistants.at(0))
+          #for assistant in assistants.slice(1) [
+
+            // there's probably a better way than hiding this
+            #hide[#translate("assistance"): ]#name-with-titles(assistant)
+          ]
+        ]
       ]
     ]
 
