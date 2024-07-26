@@ -2,8 +2,6 @@ name: Update package registry fork
 on:
   push:
     tags: [ v* ]
-    branches:
-      - main
 
 env:
   REGISTRY_REPO: Otto-AA/packages
