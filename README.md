@@ -28,7 +28,7 @@ If you want to adapt the styling, you can remove the `show: ...` commands in the
 
 ## Contributing
 
-I guess there are many ways to improve this template, feel free to do so and submit issues and PRs! More information at [CONTRIBUTING.md](https://github.com/Otto-AA/unofficial-tu-wien-thesis-template/blob/main/README.md)
+I guess there are many ways to improve this template, feel free to do so and submit issues and PRs! More information at [CONTRIBUTING.md](https://github.com/Otto-AA/unofficial-tu-wien-thesis-template/blob/main/CONTRIBUTING.md)
 
 ## License
 

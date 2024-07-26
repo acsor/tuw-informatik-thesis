@@ -1,6 +1,6 @@
 # Contributing
 
-Any improvements and fixes are welcome!
+Any improvements and fixes are welcome! If you notice any inconsistencies with the official template, please open an issue.
 
 ## Development setup
 
