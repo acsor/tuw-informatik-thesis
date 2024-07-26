@@ -15,6 +15,7 @@
   reviewers: (),
   keywords: (),
   date: datetime.today(),
+  font: "DejaVu Sans",
   doc,
 ) = {
   assert(lang in ("en", "de"))
@@ -41,14 +42,15 @@
   )
   init_translations(additional-translations)
 
+  let filled-frontpage = frontpage.with(font, author, advisor, assistants, reviewers, show-curriculum, date)
 
   text(lang: "de")[
-    #frontpage(author, advisor, assistants, reviewers, show-curriculum, date)
+    #filled-frontpage()
     #pagebreak()
     #pagebreak()
   ]
   text(lang: "en")[
-    #frontpage(author, advisor, assistants, reviewers, show-curriculum, date)
+    #filled-frontpage()
     #pagebreak()
   ]
 
