@@ -4,7 +4,10 @@ version = "0.0.1"
 entrypoint = "src/thesis.typ"
 authors = ["Othmar Lechner @Otto-AA"]
 license = "MIT-0"
-description = "An inoffical template for a thesis at the TU Wien informatics institute."
+description = "An unofficial template for a thesis at the TU Wien informatics institute."
+repository = "https://github.com/Otto-AA/definitely-not-tuw-thesis"
+keywords = ["tuw", "tu wien"]
+categories = ["thesis"]
 exclude = [
 	".github",
 	"docs",
@@ -17,4 +20,4 @@ exclude = [
 [template]
 path = "template"
 entrypoint = "thesis.typ"
-thumbnail = "thumbnail.jpg"
+thumbnail = "thumbnail.png"
