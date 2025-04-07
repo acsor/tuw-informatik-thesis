@@ -36,7 +36,6 @@
   show emph: it => {
     text(it, spacing: 4pt)
   }
-  show link: underline
 
   rest
 }
